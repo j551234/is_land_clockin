@@ -1,7 +1,12 @@
-import fetch from 'node-fetch'
-globalThis.fetch = fetch
+import fetch from 'node-fetch';
+globalThis.fetch = fetch;
 
 const uri = 'https://auth.mayohr.com/Token';
+
+// should change to be promise function 
+// for pipeline usagee
+// use set parameter to another env files
+// 
 
 function getToken(){
     fetch(uri, {
@@ -20,10 +25,10 @@ function getToken(){
       }).then(function(data) {
         // `data` is the parsed version of the JSON returned from the above endpoint.
         console.log(data.access_token);
-        return data.access_token ; // { "userId": 1, "id": 1, "title": "...", "body": "..." }
+        return data.access_token ; 
       });
 
 }
 
 
-getToken();
+export { getToken };
