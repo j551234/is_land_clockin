@@ -18,11 +18,9 @@ var clockForm =JSON.stringify({
     "IsBehalf": false
 
 }) ;
-console.log(clockForm);
 
 function clockOut(cookies) {
    new Promise((resolve,reject)=> { 
-console.log(cookies);
     fetch(uri ,
         {
         method:'POST',
@@ -51,5 +49,7 @@ console.log(cookies);
 
 }
 
-var  result  =  getCode().then(code => getCookies(code)).then(res =>clockOut(res));
+export { clockOut}
+
+// var  result  =  getCode().then(code => getCookies(code)).then(res =>clockOut(res));
 
