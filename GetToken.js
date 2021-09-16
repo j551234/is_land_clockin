@@ -8,7 +8,8 @@ const uri = 'https://auth.mayohr.com/Token';
 // use set parameter to another env files
 // 
 
-function getToken(){
+const  getCode =  new Promise(
+  (resolve, reject) => {
     fetch(uri, {
         method:'POST',
         body:'__RequestVerificationToken=TwwPB00lACAsIyez8Ek7SE2vK08IDoSw6z66kdpKVWsBfMhuLrEyZ_j9KHALdmsqeKdIkv9EJLgBjXL_NgVQiq8hvAM1&grant_type=password&locale=zh-tw&password=Home5904059&red=https%3A%2F%2Fapolloxe.mayohr.com%2Fta&userName=james%40is-land.com.tw'
@@ -24,11 +25,10 @@ function getToken(){
         return response.json();
       }).then(function(data) {
         // `data` is the parsed version of the JSON returned from the above endpoint.
-        console.log(data.access_token);
-        return data.access_token ; 
+        resolve( data.code) ; 
       });
 
 }
 
-
-export { getToken };
+)
+export {getCode}
