@@ -1,6 +1,4 @@
 import fetch from 'node-fetch';
-import { getCode } from './GetToken.js';
-import {getCookies } from './GetCookies.js'
 globalThis.fetch = fetch;
 
 var now = new Date();

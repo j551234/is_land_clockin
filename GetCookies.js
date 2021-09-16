@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import {getCode} from './GetToken.js';
+
 globalThis.fetch = fetch;
 
 function  getCookies(code) {
