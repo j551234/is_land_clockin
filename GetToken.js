@@ -8,7 +8,9 @@ const uri = 'https://auth.mayohr.com/Token';
 // use set parameter to another env files
 // 
 
-const  getCode =  new Promise(
+function  getCode() 
+{
+return new Promise(
   (resolve, reject) => {
     fetch(uri, {
         method:'POST',
@@ -28,7 +30,6 @@ const  getCode =  new Promise(
         resolve( data.code) ; 
       });
 
+})
 }
-
-)
 export {getCode}

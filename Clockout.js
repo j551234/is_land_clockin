@@ -5,21 +5,22 @@ globalThis.fetch = fetch;
 
 var now = new Date();
 var nowDate =now.toISOString().split('T')[0];
-var clockTime = new Date(nowDate+"T00:30:00+00:00");
+var clockTime = (nowDate+"T10:00:00+00:00");
+
 
 // attendance Type : 1 上班
 // attendance Type : 2 下班
 const uri = 'https://pt-backend.mayohr.com/api/reCheckInApproval';
 var clockForm =JSON.stringify({
     "AttendanceOn":clockTime,
-    "AttendanceType": 1,
+    "AttendanceType": 2,
     "PunchesLocationId": "238d95ba-b5ba-44b4-adff-8fc39492680c",
     "IsBehalf": false
 
 }) ;
-
 console.log(clockForm);
-function clockIn(cookies) {
+
+function clockOut(cookies) {
    new Promise((resolve,reject)=> { 
 console.log(cookies);
     fetch(uri ,
@@ -50,5 +51,5 @@ console.log(cookies);
 
 }
 
-var  result  =  getCode().then(code => getCookies(code)).then(res =>clockIn(res));
+var  result  =  getCode().then(code => getCookies(code)).then(res =>clockOut(res));
 
