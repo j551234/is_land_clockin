@@ -2,7 +2,7 @@
 use nodejs to call api help clockin daily
 
 ## init
-npm init
+npm install
 
 ## set your password and account
 in gettoken.js,needs to set your account into 
@@ -11,13 +11,13 @@ var password= 'YOURPASSWORD';
 var userName ='YOURACCOUNT';
 ```
 
-## usage
+## usage in local
 * npm start : start api ,for daily call
 * node clockin.js : clockIN today 
 * node clockout.js : clockOut today
 
 
 
-## scenary 
+## daily call scenario 
 * use heroku for server 
-* use appscript to trigger daily 
+* use google app script to trigger daily 
