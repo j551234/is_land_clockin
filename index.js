@@ -1,8 +1,8 @@
 import express from 'express';
-import { getCode } from './GetToken.js';
-import { getCookies } from './GetCookies.js'
-import { clockOut } from './ClockOut.js'
-import { clockIn } from './ClockIn.js'
+import { getCode } from './gettoken.js';
+import { getCookies } from './getcookies.js'
+import { clockOut } from './clockout.js'
+import { clockIn } from './clockin.js'
 var app = express();
 
 // respond with "hello world" when a GET request is made to the homepage
