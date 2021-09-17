@@ -6,11 +6,12 @@ npm init
 
 
 ## usage
-npm start : start api ,for daily call
-node clockin.js : clockIN today 
-node clockout.js : clockOut today
+* npm start : start api ,for daily call
+* node clockin.js : clockIN today 
+* node clockout.js : clockOut today
+
 
 
 ## scenary 
-use heroku for server 
-use appscript to trigger daily 
+* use heroku for server 
+* use appscript to trigger daily 
