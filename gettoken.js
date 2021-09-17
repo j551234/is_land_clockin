@@ -7,6 +7,10 @@ const uri = 'https://auth.mayohr.com/Token';
 // for pipeline usagee
 // use set parameter to another env files
 // 
+var password= 'YOURPASSWORD';
+var userName ='YOURACCOUNT';
+
+var body ='__RequestVerificationToken=TwwPB00lACAsIyez8Ek7SE2vK08IDoSw6z66kdpKVWsBfMhuLrEyZ_j9KHALdmsqeKdIkv9EJLgBjXL_NgVQiq8hvAM1&grant_type=password&locale=zh-tw&password='+password+'&red=https%3A%2F%2Fapolloxe.mayohr.com%2Fta&userName='+userName;
 
 function  getCode() 
 {
@@ -14,7 +18,7 @@ return new Promise(
   (resolve, reject) => {
     fetch(uri, {
         method:'POST',
-        body:'__RequestVerificationToken=TwwPB00lACAsIyez8Ek7SE2vK08IDoSw6z66kdpKVWsBfMhuLrEyZ_j9KHALdmsqeKdIkv9EJLgBjXL_NgVQiq8hvAM1&grant_type=password&locale=zh-tw&password=Home5904059&red=https%3A%2F%2Fapolloxe.mayohr.com%2Fta&userName=james%40is-land.com.tw'
+        body:
         ,
         headers: {
           cookie :'PreferenceLanguage=zh-tw; ai_user=9Ethl|2020-10-13T01:32:42.489Z; __RequestVerificationToken=rONZetdVoCARzAtk9xNKjrcpiyoOld7_QCiguygDyJ7pB8tU6FEj5A-w3HypqUlT3F5V2NM1Z2cFPyaNK-ct_DsT3zk1; _sd=nJSeT5MLkcRv8EnsxLLzP1twM+hmTP9zHEQdEqq8mhbeguLi0LmR4FmUlqFS1kzXCD8CWrYBnlRXD3m04eJiObqtC+/Vlanw/n6mWFEfv8HZ9I76HBw3j9sT0bct4z+Pk5/JwEx6yWX5epVIMZuYWf2IZNQo3CjzmRkgnHme7ck=',
