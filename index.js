@@ -17,13 +17,13 @@ app.get('/', function(req, res) {
 });
 
 
-app.get('clockIn', function(req, res) {
+app.get('/clockIn', function(req, res) {
   res.send('clock In today');
   var  result  =  getCode().then(code => getCookies(code)).then(res =>clockIn(res));
 });
 
 
-app.get('clockOut', function(req, res) {
+app.get('/clockOut', function(req, res) {
   res.send('clock Out today');
   var  result  =  getCode().then(code => getCookies(code)).then(res =>clockOut(res));
 });
