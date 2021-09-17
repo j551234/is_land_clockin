@@ -29,11 +29,12 @@ app.get('clockOut', function(req, res) {
 });
 
 
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 
-var server = app.listen(8081, function () {
+var server = app.listen(port, host, function () {
 
-  var host = server.address().address
-  var port = server.address().port
+
 
   console.log("Example app listening at http://%s:%s", host, port)
 
