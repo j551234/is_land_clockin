@@ -7,8 +7,10 @@ const uri = 'https://auth.mayohr.com/Token';
 // for pipeline usagee
 // use set parameter to another env files
 // 
-var password= 'YOURPASSWORD';
-var userName ='YOURACCOUNT';
+var password= process.env.password
+
+var userName = process.env.userName
+
 
 var body ='__RequestVerificationToken=TwwPB00lACAsIyez8Ek7SE2vK08IDoSw6z66kdpKVWsBfMhuLrEyZ_j9KHALdmsqeKdIkv9EJLgBjXL_NgVQiq8hvAM1&grant_type=password&locale=zh-tw&password='+password+'&red=https%3A%2F%2Fapolloxe.mayohr.com%2Fta&userName='+userName;
 
